@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2e2a23;
+  font-family: 'Exo 2', sans-serif;
+  color: #777;
+  font-size: 24px;
+  display: flex;
+}
+
+.left-column {
+  width: calc(100% - 375px);
+}
+
+.header {
+  padding: 15px;
+}
+
+.header__title {
+  font-size: 18px;
+}
+
+.right-column {
+  width: 375px;
+  padding-bottom: 50px;
+  background-color: #221e18;
+}
