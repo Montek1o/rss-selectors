@@ -1,0 +1,122 @@
+.editor {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  border: solid 10px rgba(0,0,0,.35);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.editor__pane {
+  width: 50%;
+}
+
+.html-view {
+  border-right: solid 1px rgba(255,255,255,.03);
+  border-bottom: solid 1px rgba(255,255,255,.03);
+}
+
+.editor__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-top: solid 1px rgba(255,255,255,.05);
+  border-bottom: solid 1px rgba(255,255,255,.05);
+  color: rgba(255,255,255,.6);
+  background: rgba(0,0,0,.15);
+}
+
+.editor__file-name {
+  color: #777;
+}
+
+.editor__main {
+  display: flex;
+}
+
+.html-view .editor__main {
+  background: rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.editor__line-numbers {
+  padding: 10px 10px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.css-view .editor__line-numbers {
+  color: #999;
+  background: #DDD;
+}
+
+.html-view .editor__line-numbers {
+  border-right: solid 1px #333;
+}
+
+.editor__code {
+  padding: 10px;
+  width: 100%;
+}
+
+.css-view .editor__code {
+  background: #efefef;
+  color: #AAA;
+}
+
+.editor__entry {
+  display: flex;
+}
+
+.editor__input {
+  border: none;
+  font-family: monospace;
+  font-size: 16px;
+  background: #efefef;
+  animation-duration: .8s;
+  animation-name: input-highlighting;
+  animation-iteration-count: infinite;
+  width: 100%;
+}
+
+.editor__input:focus {
+  outline: none;
+  animation: none;
+}
+
+.editor__input:active {
+  animation: none;
+}
+
+.editor__enter {
+  width: 41px;
+  background: #ddd;
+  padding: 2px 7px 2px 7px;
+  margin-left: 10px;
+  font-size: 9px;
+  color: #666;
+  border: solid 3px #999;
+  border-width: 1px 1px 6px 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.editor__help {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@keyframes input-highlighting {
+  0% {
+    background: #efefef;
+  }
+  50% {
+    background: rgba(62,203,255,.3);
+  }
+  100% {
+    background: #efefef;
+  }
+}
