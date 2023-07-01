@@ -24,6 +24,23 @@ body {
   font-size: 18px;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px 0;
+}
+
+.github-image {
+  width: 60px;
+}
+
+.rss-image {
+  width: 60px;
+}
+
 .right-column {
   width: 375px;
   padding-bottom: 50px;

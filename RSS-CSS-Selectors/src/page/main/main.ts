@@ -1,3 +1,6 @@
+import git from '../../assets/git.png';
+import rss from '../../assets/rss.jpg';
+
 export function createElem(elem: string, className?: string, text?: string): HTMLElement {
   const element = document.createElement(elem);
 
@@ -18,9 +21,27 @@ export default function createPage(): void {
   const header = createElem('header', 'header');
   const title = createElem('h1', 'header__title', 'CSS Shape');
   const main = createElem('main');
-  const footer = createElem('footer');
+  const footer = createElem('footer', 'footer');
+  const linkGit = createElem('a') as HTMLLinkElement;
+  const imageGit = createElem('img', 'github-image') as HTMLImageElement;
+  const year = createElem('p', 'year', '©️ 2023')
+  const linkRss = createElem('a') as HTMLLinkElement;
+  const imageRss = createElem('img', 'rss-image') as HTMLImageElement;
+
+  linkGit.href = 'https://github.com/Montek1o';
+  linkRss.href = 'https://rs.school/js/';
+  linkGit.setAttribute('target', '_blank');
+  linkRss.setAttribute('target', '_blank');
+
+  imageGit.src = `${git}`;
+  imageRss.src = `${rss}`;
+  imageGit.alt = 'github';
+  imageRss.alt = 'rss-school';
 
   header.append(title);
+  linkGit.append(imageGit);
+  linkRss.append(imageRss);
+  footer.append(linkGit, year, linkRss);
   leftColumn.append(header, main, footer);
   body.append(leftColumn, rightColumn);
 }

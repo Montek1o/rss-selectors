@@ -7,7 +7,6 @@ export default function createLevels(): void {
   const reset = createElem('a', 'reset-button', 'Reset progress');
   let level;
 
-
   levels.append(title);
   
   for (let i = 1; i <= 10; i++) {
