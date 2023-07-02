@@ -11,10 +11,26 @@ export default function createLevels(): void {
 
   for (let i = 1; i <= countLevels; i++) {
     const level = createElem('a', 'levels__item') as HTMLLinkElement;
-    level.innerHTML = `<span class="complete-icon"></span>${i.toString()}`;
-    /* level.href = `/level-${i}`; */
-    level.id = `level-${i.toString()}`;
-    levels.append(level);
+    if (localStorage[`level${i}`] == 'completed') {
+      const icon = createElem('span', 'complete-icon_completed') as HTMLElement;
+      level.innerHTML = `${i.toString()}`;
+      level.prepend(icon);
+      level.id = `level-${i.toString()}`;
+      levels.append(level);
+    } else {
+      const icon = createElem('span', 'complete-icon') as HTMLElement;
+      level.innerHTML = `${i.toString()}`;
+      level.prepend(icon);
+      level.id = `level-${i.toString()}`;
+      levels.append(level);
+    }
+
+    if (!localStorage[`level${i}`]) {
+      localStorage.setItem(`level${i}`, 'in-progress');
+    }
+  }
+  if (!localStorage.currentLevel) {
+    localStorage.setItem(`currentLevel`, '1');
   }
   
   aside.append(levels, reset);

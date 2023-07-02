@@ -14,7 +14,7 @@ function createCssPane(): HTMLElement {
   const codeHelp = createElem('div', 'editor__help');
 
   input.setAttribute('placeholder', 'Type in a CSS selector');
-  codeHelp.innerHTML = '{<br>/* Styles would go here. */<br>{';
+  codeHelp.innerHTML = '{<br>/* Styles would go here. */<br>}';
 
   for (let i = 0; i <= 20; i++) {
     lineNumbers.append(createElem('p', 'editor__number', i.toString()));

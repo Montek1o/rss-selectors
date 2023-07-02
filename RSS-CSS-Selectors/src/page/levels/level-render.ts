@@ -60,7 +60,7 @@ function codeRender(): void {
   const arrayTegs = code.innerHTML.replace(/>/gi, '*').split('*').slice(0, -1).map((item) => {
     return item = `${item}>`
   });
-  
+
   for (let i = 0; i < arrayTegs.length; i++) {
     if (arrayTegs[i][1] != '/') {
       spaceCount++;
@@ -81,9 +81,9 @@ function levelNavigation(levelId: string): void {
   const levelsNumber = document.querySelectorAll('.levels__item');
 
   levelsNumber.forEach(e => {
-    e.className = 'levels__item';
+    e.classList.remove('levels__item-active');
   })
-  levelNumber.className = 'levels__item levels__item-active';
+  levelNumber.classList.add('levels__item-active');
 }
 
 export default function levelRender(levelId: string): void {

@@ -17,7 +17,7 @@ export function createElem(elem: string, className?: string, text?: string): HTM
 export default function createPage(): void {
   const body = document.body;
   const leftColumn = createElem('div', 'left-column');
-  const rightColumn = createElem('div', 'right-column');
+  const rightColumn = createElem('aside', 'right-column');
   const header = createElem('header', 'header');
   const title = createElem('h1', 'header__title', 'CSS Training');
   const main = createElem('main');
