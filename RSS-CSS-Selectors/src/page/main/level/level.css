@@ -13,6 +13,7 @@
   color: #777;
   text-decoration: none;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .levels__item-active {
@@ -39,6 +40,7 @@
   border: solid 3px #777;
   border-width: 0 4px 4px 0;
   transform: rotate(40deg);
+  transition: all .3s ease;
 }
 
 .complete-icon_completed {

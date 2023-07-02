@@ -85,6 +85,7 @@ ball {
   border-bottom: 6px solid rgb(117, 20, 20);
   border-radius: 48%;
   box-shadow: 5px 5px 10px #000;
+  transition: all .3s ease;
 }
 
 .small {
@@ -118,4 +119,20 @@ ball {
   100% {
     transform: skew(6deg);
   }
+}
+
+@keyframes correct-answer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+.correct {
+  animation-duration: .8s;
+  animation-name: correct-answer;
+  animation-iteration-count: infinite;
 }
