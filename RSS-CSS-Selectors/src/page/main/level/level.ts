@@ -1,4 +1,4 @@
-import { createElem } from "../main/main";
+import { createElem } from "../layout/layout";
 
 export default function createLevels(): void {
   const aside = document.querySelector('.right-column') as HTMLElement;
@@ -12,6 +12,7 @@ export default function createLevels(): void {
   for (let i = 1; i <= 10; i++) {
     level = createElem('a', 'levels__item');
     level.innerHTML = `<span class="complete-icon"></span>${i.toString()}`;
+    level.id = `level-${i.toString()}`;
     levels.append(level);
   }
   

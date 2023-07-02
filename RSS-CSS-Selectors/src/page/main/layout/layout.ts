@@ -1,5 +1,5 @@
-import git from '../../assets/git.png';
-import rss from '../../assets/rss.jpg';
+import git from '../../../assets/git.png';
+import rss from '../../../assets/rss.jpg';
 
 export function createElem(elem: string, className?: string, text?: string): HTMLElement {
   const element = document.createElement(elem);
@@ -19,7 +19,7 @@ export default function createPage(): void {
   const leftColumn = createElem('div', 'left-column');
   const rightColumn = createElem('div', 'right-column');
   const header = createElem('header', 'header');
-  const title = createElem('h1', 'header__title', 'CSS Shape');
+  const title = createElem('h1', 'header__title', 'CSS Training');
   const main = createElem('main');
   const footer = createElem('footer', 'footer');
   const linkGit = createElem('a') as HTMLLinkElement;

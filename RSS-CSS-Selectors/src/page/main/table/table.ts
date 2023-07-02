@@ -1,9 +1,9 @@
-import { createElem } from "../main/main";
+import { createElem } from "../layout/layout";
 
 export default function createTable(): void {
   const main = document.querySelector('main') as HTMLElement;
   const task = createElem('section', 'task');
-  const taskCondition = createElem('h2', 'task__condition', 'Select the fancy shape');
+  const taskCondition = createElem('h2', 'task__condition', 'Select the highlighted item');
   const game = createElem('section', 'game');
   const gameTable = createElem('div', 'game__table');
 

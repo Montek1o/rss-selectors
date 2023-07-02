@@ -1,4 +1,4 @@
-import { createElem } from "../main/main";
+import { createElem } from "../layout/layout";
 
 function createCssPane(): HTMLElement {
   const container = createElem('div', 'editor__pane css-view');
@@ -36,7 +36,7 @@ function createHtmlPane(): HTMLElement {
   const fileName = createElem('p', 'editor__file-name', 'table.html');
   const main = createElem('div', 'editor__main');
   const lineNumbers = createElem('div', 'editor__line-numbers');
-  const code = createElem('div', 'editor__code');
+  const code = createElem('div', 'editor__code html-view-code');
 
   for (let i = 0; i <= 20; i++) {
     lineNumbers.append(createElem('p', 'editor__number', i.toString()));

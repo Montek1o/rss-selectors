@@ -1,7 +1,7 @@
 import app from './page/app/app';
-import './page/main/main.css';
-import './page/table/table.css';
-import './page/editor/editor.css';
-import './page/levels/levels.css';
+import './page/main/layout/layout.css';
+import './page/main/table/table.css';
+import './page/main/editor/editor.css';
+import './page/main/level/level.css';
 
 app();
