@@ -5,6 +5,8 @@ function tableRender(levelId: string): void {
   const table = document.querySelector('.game__table') as HTMLElement;
   const level = levels[Number(levelId) - 1].selectors;
 
+  table.innerHTML = '';
+
   level.forEach((item) => {
     if (item.active === true) {
       const elem = createElem(item.selector, 'active');
@@ -71,11 +73,16 @@ function codeRender(): void {
 
   const tegs = arrayTegs.join('\n').replace(/class="active"/gi, '').replace(/ >/gi, '>').replace(/active /gi, '');
 
-  htmlViewer.innerText = `<div class=table>\n${tegs}\n</div>`;
+  htmlViewer.innerText = `<div class="table">\n${tegs}\n</div>`;
 }
 
 function levelNavigation(levelId: string): void {
   const levelNumber = document.querySelector(`#level-${levelId}`) as HTMLElement;
+  const levelsNumber = document.querySelectorAll('.levels__item');
+
+  levelsNumber.forEach(e => {
+    e.className = 'levels__item';
+  })
   levelNumber.className = 'levels__item levels__item-active';
 }
 

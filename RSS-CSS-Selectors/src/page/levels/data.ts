@@ -336,12 +336,6 @@ export const levels = [
         selectorClass: '',
         active: false,
       },
-      {
-        selector: 'pickle',
-        selectorId: '',
-        selectorClass: 'small-pickle',
-        active: false,
-      },
     ]
   },
   {

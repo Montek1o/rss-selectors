@@ -10,6 +10,8 @@
   display: block;
   padding: 10px 10px 10px 30px;
   margin-top: 20px;
+  color: #777;
+  text-decoration: none;
   cursor: pointer;
 }
 
