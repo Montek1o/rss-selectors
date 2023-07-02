@@ -16,7 +16,7 @@ function createCssPane(): HTMLElement {
   input.setAttribute('placeholder', 'Type in a CSS selector');
   codeHelp.innerHTML = '{<br>/* Styles would go here. */<br>}';
 
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 1; i <= 20; i++) {
     lineNumbers.append(createElem('p', 'editor__number', i.toString()));
   }
 
@@ -38,7 +38,7 @@ function createHtmlPane(): HTMLElement {
   const lineNumbers = createElem('div', 'editor__line-numbers');
   const code = createElem('div', 'editor__code html-view-code');
 
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 1; i <= 20; i++) {
     lineNumbers.append(createElem('p', 'editor__number', i.toString()));
   }
 

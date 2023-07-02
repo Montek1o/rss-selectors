@@ -30,5 +30,5 @@ export default function createLevels(): void {
     localStorage.setItem(`currentLevel`, '1');
   }
   
-  aside.append(levels, reset);
+  aside.prepend(levels, reset);
 }

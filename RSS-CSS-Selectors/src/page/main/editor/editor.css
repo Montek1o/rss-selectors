@@ -38,14 +38,20 @@
 .html-view .editor__main {
   background: rgba(0,0,0,.3);
   font-size: 14px;
-  line-height: 150%;
+  line-height: 130%;
 }
 
 .editor__line-numbers {
-  padding: 10px 10px;
+  padding: 10px;
   text-align: right;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 130%;
+}
+
+.editor__code {
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
 }
 
 .css-view .editor__line-numbers {
@@ -57,11 +63,6 @@
   border-right: solid 1px #333;
 }
 
-.editor__code {
-  padding: 10px;
-  width: 100%;
-}
-
 .css-view .editor__code {
   background: #efefef;
   color: #AAA;
@@ -69,12 +70,13 @@
 
 .editor__entry {
   display: flex;
+  height: 18px;
 }
 
 .editor__input {
   border: none;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 14px;
   background: #efefef;
   animation-duration: .8s;
   animation-name: input-highlighting;
@@ -94,30 +96,30 @@
 .editor__enter {
   width: 41px;
   background: #ddd;
-  padding: 2px 7px 2px 7px;
+  padding: 1px 7px 1px 7px;
   margin-left: 10px;
   font-size: 9px;
   color: #666;
   border: solid 3px #999;
-  border-width: 1px 1px 6px 1px;
+  border-width: 1px 1px 5px 1px;
   border-radius: 2px;
   cursor: pointer;
   transition: all .1s ease;
 }
 
 .editor__enter-active {
-  margin-top: 4px;
+  margin-top: 3px;
   border-width: 1px 1px 2px 1px;
 }
 
 .editor__enter:active {
-  margin-top: 4px;
+  margin-top: 3px;
   border-width: 1px 1px 2px 1px;
 }
 
 .editor__help {
   font-size: 14px;
-  line-height: 150%;
+  line-height: 130%;
 }
 
 @keyframes input-highlighting {
@@ -129,5 +131,33 @@
   }
   100% {
     background: #efefef;
+  }
+}
+
+@media (max-width: 1023px) {
+  .editor {
+    font-size: 14px;
+  }
+
+  .editor__input {
+    font-size: 9px;
+  }
+
+  .editor__line-numbers {
+    padding: 10px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 130%;
+  }
+
+  .editor__help {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .html-view .editor__main {
+    background: rgba(0,0,0,.3);
+    font-size: 12px;
+    line-height: 129%;
   }
 }

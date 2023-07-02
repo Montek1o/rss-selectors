@@ -1,5 +1,5 @@
 .levels {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 .levels__title {
@@ -9,7 +9,7 @@
 .levels__item {
   display: block;
   padding: 10px 10px 10px 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   color: #777;
   text-decoration: none;
   cursor: pointer;
@@ -43,21 +43,11 @@
   transition: all .3s ease;
 }
 
-.complete-icon_completed {
-  display: inline-block;
-  width: 12px;
-  height: 20px;
-  margin: 0 15px 0 0;
-  border: solid 3px #4cbb4a;
-  border-width: 0 4px 4px 0;
-  transform: rotate(40deg);
-}
-
 .reset-button {
   display: block;
   width: calc(100% - 40px);
   padding: 9px 0 11px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   border: solid 2px rgba(255,255,255,.2);
   color: rgba(255,255,255,.4);
   text-align: center;
@@ -71,4 +61,28 @@
 
 .reset-button:active {
   opacity: .6;
+}
+
+@media (max-width: 1023px) {
+  .levels {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .levels__title {
+    padding: 6px;
+  }
+
+  .levels__item {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .reset-button {
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
 }
