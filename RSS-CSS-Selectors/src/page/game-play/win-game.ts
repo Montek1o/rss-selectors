@@ -20,14 +20,13 @@ export default function winGame() {
     popup.classList.add('popup-active');
     document.body.style.overflow = 'hidden';
 
-    restartButton.addEventListener('click', e => {
+    restartButton.addEventListener('click', () => {
       container.classList.remove('win-active');
       popup.classList.remove('popup-active');
       document.body.style.overflow = '';
       localStorage.currentLevel = 1;
       resetProgress();
       levelRender('1');
-      return e;
     })
   }
 }

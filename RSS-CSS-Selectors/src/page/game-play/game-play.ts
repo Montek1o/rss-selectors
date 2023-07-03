@@ -22,8 +22,5 @@ export default function gamePlay(level: string): void {
     levelRender(`${Number(level) + 1}`);
     input.value = '';
     winGame();
-  } else {
-    const panel = document.querySelector('.css-view .editor__code') as HTMLElement;
-    console.log(panel);
-  }
+  } 
 }

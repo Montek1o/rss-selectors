@@ -25,6 +25,14 @@ export default function createLevels(): void {
     if (!localStorage[`level${i}`]) {
       localStorage.setItem(`level${i}`, 'in-progress');
     }
+
+    if (!localStorage[`level${i}-hint`]) {
+      localStorage.setItem(`level${i}-hint`, 'no');
+    } 
+
+    if (localStorage[`level${i}-hint`] === 'yes') {
+      level.classList.add('use-hint');
+    }
   }
   if (!localStorage.currentLevel) {
     localStorage.setItem(`currentLevel`, '1');

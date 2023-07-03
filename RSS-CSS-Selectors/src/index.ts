@@ -12,14 +12,12 @@ app();
 const enter = document.querySelector('.editor__enter') as HTMLElement;
 const reset = document.querySelector('.reset-button') as HTMLElement;
 
-enter.addEventListener('click', e => {
+enter.addEventListener('click', () => {
   gamePlay(localStorage.getItem('currentLevel') as string);
-  return e;
 });
 
-reset.addEventListener('click', e => {
+reset.addEventListener('click', () => {
   resetProgress();
-  return e;
 })
 
 document.addEventListener('keydown', (e) => {
