@@ -154,6 +154,17 @@
   animation-iteration-count: 1;
 }
 
+.html {
+  padding: 0;
+  background: transparent;
+  color: #777;
+  height: 100px;
+}
+
+.hljs {
+  display: flex;
+}
+
 @keyframes incorrect {
   0% {
     background: #efefef;

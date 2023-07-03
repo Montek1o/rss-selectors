@@ -31,8 +31,6 @@ export default function createPage(): void {
   const year = createElem('p', 'year', '©️ 2023')
   const linkRss = createElem('a') as HTMLLinkElement;
   const imageRss = createElem('img', 'rss-image') as HTMLImageElement;
-
-
   
   linkGit.href = 'https://github.com/Montek1o';
   linkRss.href = 'https://rs.school/js/';
