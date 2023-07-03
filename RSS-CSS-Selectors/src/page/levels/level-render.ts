@@ -1,3 +1,4 @@
+import help from '../game-play/help';
 import { createElem } from '../main/layout/layout';
 import { levels } from './data';
 
@@ -90,4 +91,5 @@ export default function levelRender(levelId: string): void {
   tableRender(levelId);
   codeRender();
   levelNavigation(levelId);
+  help();
 }

@@ -1,3 +1,4 @@
+import levelRender from "../levels/level-render";
 import resetProgress from "./reset-progress";
 
 export default function winGame() {
@@ -23,7 +24,9 @@ export default function winGame() {
       container.classList.remove('win-active');
       popup.classList.remove('popup-active');
       document.body.style.overflow = '';
+      localStorage.currentLevel = 1;
       resetProgress();
+      levelRender('1');
       return e;
     })
   }

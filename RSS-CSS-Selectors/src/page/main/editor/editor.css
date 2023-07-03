@@ -68,8 +68,14 @@
   color: #AAA;
 }
 
+.incorrect-answer {
+  background-color: #e07171 !important;
+  transition: all 0.3s ease;
+}
+
 .editor__entry {
   display: flex;
+  justify-content: space-between;
   height: 18px;
 }
 
@@ -113,6 +119,25 @@
 }
 
 .editor__enter:active {
+  margin-top: 3px;
+  border-width: 1px 1px 2px 1px;
+}
+
+.editor__help-button {
+  width: 41px;
+  background: #ddd;
+  padding: 1px 7px 1px 7px;
+  margin-left: 10px;
+  font-size: 9px;
+  color: #666;
+  border: solid 3px #999;
+  border-width: 1px 1px 5px 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+.editor__help-button:active {
   margin-top: 3px;
   border-width: 1px 1px 2px 1px;
 }

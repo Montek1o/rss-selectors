@@ -1,42 +1,42 @@
 export const answers = [
   {
     level: '1',
-    answer: 'circle'
+    answer: 'circle' // 'circle'
   },
   {
     level: '2',
-    answer: 'square'
+    answer: 'square' // 'square'
   },
   {
     level: '3',
-    answer: '#border'
+    answer: '#border' // '#border'
   },
   {
     level: '4',
-    answer: 'circle cigarette'
+    answer: 'circle cigarette' // 'circle cigarette'
   },
   {
     level: '5',
-    answer: '#border cigarette'
+    answer: '#border cigarette' // '#border cigarette'
   },
   {
     level: '6',
-    answer: '.small'
+    answer: '.small' // '.small'
   },
   {
     level: '7',
-    answer: 'orange.small'
+    answer: 'orange.small' // 'orange.small'
   },
   {
-    level: '8',
-    answer: 'square orange.small'
+    level: '8', 
+    answer: 'square orange.small' // 'square orange.small'
   },
   {
     level: '9',
-    answer: 'circle, square'
+    answer: 'circle, square' // 'circle, square'
   },
   {
     level: '10',
-    answer: 'ball, circle, orange, square'
+    answer: 'ball, circle, orange, square' // 'ball, circle, orange, square'
   },
 ];

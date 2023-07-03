@@ -10,6 +10,7 @@ export default function gamePlay(level: string): void {
     levelsNumber[Number(level) - 1].classList.add('levels__item-complete');
     localStorage[`level${Number(level)}`] = 'completed';
     levelRender('1');
+    localStorage.currentLevel = 1;
     input.value = '';
     winGame();
   }
@@ -21,5 +22,8 @@ export default function gamePlay(level: string): void {
     levelRender(`${Number(level) + 1}`);
     input.value = '';
     winGame();
+  } else {
+    const panel = document.querySelector('.css-view .editor__code') as HTMLElement;
+    console.log(panel);
   }
 }

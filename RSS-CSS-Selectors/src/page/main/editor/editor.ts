@@ -11,6 +11,7 @@ function createCssPane(): HTMLElement {
   const codeEntry = createElem('div', 'editor__entry');
   const input = createElem('input', 'editor__input');
   const enter = createElem('div', 'editor__enter', 'enter');
+  const help = createElem('div', 'editor__help-button', 'help');
   const codeHelp = createElem('div', 'editor__help');
 
   input.setAttribute('placeholder', 'Type in a CSS selector');
@@ -21,7 +22,7 @@ function createCssPane(): HTMLElement {
   }
 
   header.append(type, fileName);
-  codeEntry.append(input, enter);
+  codeEntry.append(input, help, enter);
   code.append(codeEntry, codeHelp);
   main.append(lineNumbers, code);
   container.append(header, main);
