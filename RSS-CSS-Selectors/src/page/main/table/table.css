@@ -128,9 +128,9 @@ ball {
 }
 
 .correct {
-  animation-duration: .8s;
+  animation-duration: 1s;
   animation-name: correct-answer;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 @media (max-width: 1023px) {

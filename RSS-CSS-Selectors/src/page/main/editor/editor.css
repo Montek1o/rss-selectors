@@ -66,10 +66,6 @@
 .css-view .editor__code {
   background: #efefef;
   color: #AAA;
-}
-
-.incorrect-answer {
-  background-color: #e07171 !important;
   transition: all 0.3s ease;
 }
 
@@ -145,6 +141,29 @@
 .editor__help {
   font-size: 14px;
   line-height: 130%;
+}
+
+.css-view .editor__code {
+  background: #efefef;
+  color: #AAA;
+}
+
+.incorrect-answer {
+  animation-duration: .5s;
+  animation-name: incorrect;
+  animation-iteration-count: 1;
+}
+
+@keyframes incorrect {
+  0% {
+    background: #efefef;
+  }
+  50% {
+    background: #dd8181;
+  }
+  100% {
+    background: #efefef;
+  }
 }
 
 @keyframes input-highlighting {
