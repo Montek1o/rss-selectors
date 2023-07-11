@@ -8,36 +8,30 @@ export default function gamePlay(level: string): void {
   const activeItem = document.querySelectorAll('.active');
   const cssPane = document.querySelector('.css-view .editor__code') as HTMLElement;
   
-  if (input.value == answers[Number(level) - 1].answer && level == '10') {
-    levelsNumber[Number(level) - 1].classList.add('levels__item-complete');
-    localStorage[`level${Number(level)}`] = 'completed';
-    localStorage.currentLevel = 1;
+  if (input.value == answers[+level - 1].answer) {
+    levelsNumber[+level - 1].classList.add('levels__item-complete');
+    localStorage[`level${+level}`] = 'completed';
     input.value = '';
-
+    
     activeItem.forEach((e) => {
       e.classList.add('correct');
     })
     
     winGame();
-    setTimeout(
-      () => levelRender('1'),
-      1000,
-    );
-  } else if (input.value == answers[Number(level) - 1].answer) {
-    levelsNumber[Number(level) - 1].classList.add('levels__item-complete');
-    localStorage.currentLevel = Number(level) + 1;
-    localStorage[`level${Number(level)}`] = 'completed';
-    input.value = '';
-
-    activeItem.forEach((e) => {
-      e.classList.add('correct');
-    })
     
-    winGame();
-    setTimeout(
-      () => levelRender(`${Number(level) + 1}`),
-      1000,
-    );
+    if (level == '10') {
+      localStorage.currentLevel = 1;
+      setTimeout(
+        () => levelRender(`1`),
+        1000,
+      );
+    } else {
+      localStorage.currentLevel = +level + 1;
+      setTimeout(
+        () => levelRender(`${+level + 1}`),
+        1000,
+      );
+    }
   } else {
     cssPane.classList.add('incorrect-answer');
     setTimeout(
