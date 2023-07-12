@@ -1,4 +1,4 @@
-import { ILevelStructure } from "../interface";
+import { ILevelStructure } from "../../interfaces";
 
 export const levels: ILevelStructure[] = [
   {
