@@ -1,4 +1,4 @@
-import levelRender from '../levels/level-render';
+import levelRender from './level-render';
 
 export default function navigation(): void {
   const levelsNumber = document.querySelectorAll('.levels__item');
