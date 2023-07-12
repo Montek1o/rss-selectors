@@ -1,18 +1,6 @@
 import git from '../../../assets/git.png';
 import rss from '../../../assets/rss.jpg';
-
-export function createElem(elem: string, className?: string, text?: string): HTMLElement {
-  const element = document.createElement(elem);
-
-  if (className) {
-    element.className = className;
-  }
-  if (text) {
-    element.innerText = text;
-  }
-
-  return element;
-}
+import { createElem } from './create-elem';
 
 export default function createPage(): void {
   const body = document.body;

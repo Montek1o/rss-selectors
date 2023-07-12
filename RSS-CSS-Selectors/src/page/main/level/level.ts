@@ -1,4 +1,4 @@
-import { createElem } from "../layout/layout";
+import { createElem } from "../layout/create-elem";
 
 export default function createLevels(): void {
   const aside = document.querySelector('.right-column') as HTMLElement;

@@ -1,4 +1,4 @@
-import { createElem } from '../main/layout/layout';
+import { createElem } from '../main/layout/create-elem';
 import { levels } from './data';
 
 export default function tableRender(levelId: string): void {

@@ -1,4 +1,4 @@
-import { createElem } from "../layout/layout";
+import { createElem } from "../layout/create-elem";
 
 export default function createTable(): void {
   const main = document.querySelector('main') as HTMLElement;
