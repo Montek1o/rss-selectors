@@ -13,27 +13,30 @@ export default function createLevels(): void {
     const level = createElem('a', 'levels__item') as HTMLLinkElement;
     const icon = createElem('span', 'complete-icon') as HTMLElement;
 
-    if (localStorage[`level${i}`] == 'completed') {
-      level.classList.add('levels__item-complete');
+    switch (localStorage[`level${i}`]) {
+      case 'completed':
+        level.classList.add('levels__item-complete');
+        break;
+      case undefined:
+        localStorage.setItem(`level${i}`, 'in-progress');
+        break;
+    }
+
+    switch (localStorage[`level${i}-hint`]) {
+      case 'yes':
+        level.classList.add('use-hint');
+        break;
+      case undefined:
+        localStorage.setItem(`level${i}-hint`, 'no');
+        break;
     }
 
     level.innerHTML = `${i.toString()}`;
     level.prepend(icon);
     level.id = `level-${i.toString()}`;
     levels.append(level);
-
-    if (!localStorage[`level${i}`]) {
-      localStorage.setItem(`level${i}`, 'in-progress');
-    }
-
-    if (!localStorage[`level${i}-hint`]) {
-      localStorage.setItem(`level${i}-hint`, 'no');
-    } 
-
-    if (localStorage[`level${i}-hint`] === 'yes') {
-      level.classList.add('use-hint');
-    }
   }
+  
   if (!localStorage.currentLevel) {
     localStorage.setItem(`currentLevel`, '1');
   }
