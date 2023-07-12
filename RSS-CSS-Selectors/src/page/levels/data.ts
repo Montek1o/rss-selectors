@@ -1,4 +1,6 @@
-export const levels = [
+import { ILevelStructure } from "../interface";
+
+export const levels: ILevelStructure[] = [
   {
     name: 'Level 1',
     selectors: [
